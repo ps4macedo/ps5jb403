@@ -50,7 +50,7 @@ function main()
 {
     var xhr = new XMLHttpRequest();
     xhr.responseType = 'arraybuffer';
-    xhr.open('GET', decodeURIComponent('ps5-kstuff.bin'), true);
+    xhr.open('GET', 'ps5-kstuff.bin', true);
     xhr.send('');
     xhr.onload = function()
     {
