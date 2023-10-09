@@ -48,9 +48,10 @@ function runScripts()
 
 function main()
 {
+    var hash = 'payload=ps5-kstuff.bin'
     var xhr = new XMLHttpRequest();
     xhr.responseType = 'arraybuffer';
-    xhr.open('GET', decodeURIComponent('ps5-kstuff.bin'), true);
+    xhr.open('GET', decodeURIComponent(document.location.hash.substr(9)), true);
     xhr.send('');
     xhr.onload = function()
     {
