@@ -64,7 +64,7 @@ var url = URL.createObjectURL(blob);
 the_worker = new Worker(url);
 the_worker.onmessage = function()
 {
-    setTimeout(main, 5000);
+    setTimeout(main, 1000);
     main = function(){};
 }
 the_worker.postMessage(1);
