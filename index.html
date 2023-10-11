@@ -35,7 +35,7 @@ function c_code_done(printf_ans, main_ret)
 function runScripts()
 {
     runJS('exploit.js');
-    document.body.setAttribute('bgColor', 'blue');
+    document.body.setAttribute('bgColor', '1f1f1f');
     runJS('malloc.js');
     runJS('rop.js');
     runJS('syscalls.js');
@@ -49,7 +49,7 @@ function main()
 {
     var xhr = new XMLHttpRequest();
     xhr.responseType = 'arraybuffer';
-    xhr.open('GET', 'ps5-kstuff.bin', '1f1f1f');
+    xhr.open('GET', 'ps5-kstuff.bin', true);
     xhr.send('');
     xhr.onload = function()
     {
