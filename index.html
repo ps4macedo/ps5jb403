@@ -1,7 +1,7 @@
 <html manifest="Cache.manifest">
 <head>
     <meta charset="utf-8" />
-    <title>PS5 4.03 JailBreak</title>
+    <title>PS5 4.03 JailBreak V1.2</title>
     <link rel="shortcut icon" href="favicon.ico"></link>
 </head>   
 <body>
@@ -63,7 +63,7 @@ var url = URL.createObjectURL(blob);
 the_worker = new Worker(url);
 the_worker.onmessage = function()
 {
-    setTimeout(main, 500);
+    setTimeout(main, 1500);
     main = function(){};
 }
 the_worker.postMessage(1);
