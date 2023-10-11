@@ -1,7 +1,7 @@
 <html manifest="Cache.manifest">
 <head>
     <meta charset="utf-8" />
-    <title>PS5 4.03 JailBreak v1.06/</title>
+    <title>PS5 4.03 JailBreak</title>
     <link rel="shortcut icon" href="favicon.ico"></link>
 </head>   
 <body>
@@ -26,7 +26,7 @@ function c_code_done(printf_ans, main_ret)
     if(main_ret)
         alert("Jailbreak failed! Reboot your PS5 and try again!\n"+printf_ans+"\nmain() returned "+main_ret);
     else
-        alert("You're all set!");
+        alert("You're all set!\n"+printf_ans);
     window.sigsegv_handler = 0;
     runJS('sigsegv.js');
     read_ptr_at(0);
@@ -35,7 +35,7 @@ function c_code_done(printf_ans, main_ret)
 function runScripts()
 {
     runJS('exploit.js');
-    document.body.setAttribute('bgColor', '#1f1f1f');
+    document.body.setAttribute('bgColor', 'blue');
     runJS('malloc.js');
     runJS('rop.js');
     runJS('syscalls.js');
@@ -63,7 +63,7 @@ var url = URL.createObjectURL(blob);
 the_worker = new Worker(url);
 the_worker.onmessage = function()
 {
-    setTimeout(main, 1000);
+    setTimeout(main, 800);
     main = function(){};
 }
 the_worker.postMessage(1);
